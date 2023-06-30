@@ -1,0 +1,11 @@
+[user]
+	email = bses30074@gmail.com
+	name = Yan-Hao-Wang
+[core]
+	editor = vim
+[color]
+	ui = true
+[alias]
+	st = status
+	rst = reset
+	ck = checkout
