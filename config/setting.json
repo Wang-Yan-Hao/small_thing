@@ -1,0 +1,112 @@
+{
+  // File
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 0,
+  // Editor
+  "editor.minimap.enabled": false,
+  "editor.indentSize": 2,
+  "editor.tabSize": 2,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  // Material icon
+  "workbench.iconTheme": "material-icon-theme",
+  // One Dark Pro
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
+  "workbench.colorCustomizations": {
+    "editor.background": "#161515",
+    "sideBar.background": "#1a1a1a",
+    "tab.activeBackground": "#222121",
+    "activityBar.background": "#222121",
+    "terminal.background": "#0e0d0d",
+    "terminal.foreground": "#ffffff",
+
+    "editor.selectionBackground": "#135564",
+    "editor.selectionHighlightBackground": "#135564",
+    "editor.findMatchBackground": "#135564",
+    "editor.lineHighlightBackground": "#35353556"
+  },
+  // Live server
+  "liveServer.settings.port": 0,
+  // Format
+  "editor.formatOnSave": true,
+  // Python
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter", // black
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "isort.args": ["--profile", "black"],
+  // Jupyter
+  "notebook.lineNumbers": "on",
+  "notebook.output.textLineLimit": 1000,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "right"
+  },
+  // Eslint with JS
+  "eslint.format.enable": true,
+  "eslint.enable": true,
+  "eslint.validate": [
+    // Only JS will be validate by eslint
+    "javascript"
+  ],
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format" // sudo apt install clang-format
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // vim
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["lineBreakInsert"],
+      "silent": true
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  // To improve performance of vim
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  }
+}
