@@ -21,9 +21,10 @@ pkg install -y devel/arcanist
 if [ "$(pkg query %n sudo)" != "sudo" ]; then
     pkg install -y sudo
     visudo 
-    # Uncomment this statement
-    # %wheel ALL=(ALL) ALL
+    # Todo: Uncomment this statement, %wheel ALL=(ALL) ALL
 fi
+
+# Todo: Create a normal user in FreeBSD using 'adduser', add the user to the 'wheel' group for sudo access.
 
 # Enable SSH
 sysrc sshd_enable=YES
@@ -33,23 +34,17 @@ sysrc sshd_enable=YES
 if [ -n "$DESKTOP" ]; then
     echo "Installing GUI tools..." # Install KDE Plasma
 
-    pkg install xorg
-    # Add the user you want 
-    # pw groupmod video -m [username]
-
-    pkg install kde5
+    # Todo: Add the user you want, `pw groupmod video -m [username]`
+    # Todo: Install correspond video driver, `pkg install xf86-video-vmware`
+    pkg install -y xorg
+    pkg install -y kde5
     sysrc dbus_enable="YES"
-    # You sholud edit etc/sysctl.conf by yourself
+    
+    # Todo: Edit etc/sysctl.conf by yourself
     sysctl net.local.stream.recvspace=65536
     sysctl net.local.stream.sendspace=65536
     echo "exec dbus-launch --exit-with-x11 ck-launch-session startplasma-x11" > ~/.xinitrc
     
-    pkg install chromium # https://forums.freebsd.org/threads/chromium-disappeared-from-pkg-after-upgrade.87491/
-    pkg install noto # Support chinese, https://ctext.org/font-test-page
-    pkg install vscode
+    pkg install -y chromium # https://forums.freebsd.org/threads/chromium-disappeared-from-pkg-after-upgrade.87491/
+    pkg install -y noto # Support chinese, https://ctext.org/font-test-page
 fi
-
-echo "Create a normal user in FreeBSD using 'adduser'."
-echo "Add the user to the 'wheel' group for sudo access."
-echo "Current user list:"
-cut -d: -f1 /etc/passwd
