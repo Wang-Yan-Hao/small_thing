@@ -39,3 +39,5 @@ git config --global core.editor "vim"
 # nouveou 關掉 https://clay-atlas.com/blog/2020/02/11/linux-chinese-note-nvidia-driver-nouveau-kernel/
 # nouveou 回覆 https://askubuntu.com/questions/206283/how-can-i-uninstall-a-nvidia-driver-completely
 # init: vmware shortcut problem https://askubuntu.com/questions/970982/guest-os-shortcuts-are-not-working-on-ubuntu-17-10-in-vmware-horizon-view-and-vi
+# Install python by apt
+# Install nvm, node_js, npm. https://bmhiamso1.medium.com/ubuntu-%E5%AE%89%E8%A3%9D-nvm-npm-3bf6bffa9152
