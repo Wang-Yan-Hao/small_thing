@@ -1,2 +1,4 @@
 # small_thing
-Put the code which is too small to be a single repo.
+Organize small code snippets or projects that are too minor to justify a standalone repository into a single repository.
+## Resume
+[Website link](https://wang-yan-hao.github.io/small_thing/resume/)
