@@ -1,11 +1,20 @@
 [user]
-	email = bses30074@gmail.com
-	name = Yan-Hao-Wang
+    email = bses30074@gmail.com
+    name = Yan-Hao-Wang
 [core]
-	editor = vim
+    editor = vim
+    autocrlf = input
 [color]
-	ui = true
+    ui = true
+[diff]
+    algorithm = histogram
+    indentHeuristic = true
+[branch]
+    sort = -committerdate
+[pull]
+    rebase = true
 [alias]
-	st = status
-	rst = reset
-	ck = checkout
+    st = status
+    rst = restore
+    ck = checkout
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
